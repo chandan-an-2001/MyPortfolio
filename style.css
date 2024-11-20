@@ -1122,3 +1122,136 @@ section.active{
     margin-top: 2rem;
     cursor: pointer;
 }
+
+/* breakpoints */
+@media screen and (max-width: 1200px)
+{
+    html{
+        font-size: 55%;
+    }
+}
+
+@media screen and (max-width: 992px){
+    header{
+        padding: 2rem 4%;
+    }
+
+    section{
+        padding: 10rem 4% 2rem;
+    }
+}
+
+
+@media screen and (max-width: 810px){
+    .contact-box .field-box{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 768px){
+    #menu-icon{
+        display: block;
+    }
+    nav{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 0;
+        background:  var(--bg-color);
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
+        text-align: center;
+        display:none;
+    }
+    nav.active{
+        display: block;
+    }
+    nav a{
+        display: block;
+        margin: 4rem 0;
+    }
+
+    .home{
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .resume-container,
+    .portfolio-container,
+    .contact-container{
+        grid-template-columns: 1fr;
+    }
+    .resume-container{
+        gap: 3rem;
+    }
+}
+/* Default Styles (for larger screens) */
+.resume-box {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.resume-detail {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.resume-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.resume-item {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+/* Responsiveness for screens smaller than 768px */
+@media (max-width: 768px) {
+    .resume-box {
+        padding: 1rem;
+    }
+
+    .resume-detail {
+        padding: 1rem;
+        font-size: 1rem; /* Adjust font size */
+    }
+
+    .resume-list {
+        display: grid;
+        grid-template-columns: 1fr; /* Stack the items vertically */
+        gap: 1.5rem;
+    }
+
+    .resume-item {
+        font-size: 0.95rem; /* Slightly smaller text for smaller screens */
+        padding: 1.2rem;
+    }
+}
+
+/* Responsiveness for screens smaller than 480px */
+@media (max-width: 480px) {
+    .resume-box {
+        padding: 0.5rem;
+    }
+
+    .resume-detail {
+        font-size: 0.9rem; /* Make the font even smaller for very small screens */
+    }
+
+    .resume-list {
+        gap: 1rem; /* Reduced gap between items on very small screens */
+    }
+
+    .resume-item {
+        font-size: 0.85rem;
+        padding: 1rem;
+    }
+}

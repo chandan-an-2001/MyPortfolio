@@ -5,6 +5,17 @@ const barBox = document.querySelector('.bars-box');
 const resumeBtns = document.querySelectorAll('.resume-btn');
 const resumeDetails = document.querySelectorAll('.resume-detail');
 
+const menuIcon = document.querySelector('#menu-icon');
+const navbar = document.querySelector('header nav');
+
+// Toggle the menu icon between open and close state
+menuIcon.addEventListener('click', () => {
+    menuIcon.classList.toggle('bx-x'); // Change icon when clicked
+
+    navbar.classList.toggle('active');
+});
+
+
 // Function to handle active state and animation for navigation
 const toggleActiveNavLink = (link) => {
     // Remove 'active' class from all nav links and bars
@@ -18,6 +29,9 @@ const toggleActiveNavLink = (link) => {
     setTimeout(() => {
         barBox.classList.add('active');
     }, 100); // Ensures enough delay for the transition
+    menuIcon.classList.remove('bx-x'); // Change icon when clicked
+    
+    navbar.classList.remove('active');
 };
 
 // Add event listeners to each navigation link
